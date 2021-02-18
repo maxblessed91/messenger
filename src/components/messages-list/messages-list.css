@@ -1,0 +1,77 @@
+.m-list {
+    /* margin: 10px 10px 10px 10px; */
+    /* background-color: #fff; */
+    /* padding-bottom: 25px; */
+}
+
+.messages-list-id {
+    /* min-height: 50px; */
+    color: rgb(105, 104, 104);
+    /* background-color: #fff; */
+}
+
+
+.messages-list-label {
+    /* min-height: 50px; */
+    color: rgb(105, 104, 104);
+    /* background-color: #fff; */
+    /* margin-left: 10px; */
+}
+
+.grid-container {
+    display: grid;
+                         grid-template-rows: 1fr 40px 50px;
+                         grid-template-columns: 60px 300px 50px;
+                  background-color: #fff;
+                  margin: 8px;
+
+}
+
+.post-1 {
+    background-color: rgb(0, 195, 255);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 3;
+    grid-column-end: 2;
+}
+
+.post-2 {
+    padding: 10px;
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-row-end: 2;
+    grid-column-end: 3;
+}
+
+.post-3 {
+    padding: 10px;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-row-end: 3;
+    grid-column-end: 3;
+}
+
+.sender {
+    /* margin-right: 20px; */
+    color: rgb(190, 189, 189);
+}
+
+
+button.add-button {
+    border-radius: 30px;
+    border: 1px solid gray;
+    background-color: white;
+    cursor: pointer;
+    font-size: 12px;
+    height: 24px;
+    width: 24px;
+    opacity: 0.5;
+    margin-left: 470px;
+}
+
+.b-list {
+    margin-top: 30px;
+}

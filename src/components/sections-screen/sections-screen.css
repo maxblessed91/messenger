@@ -1,0 +1,24 @@
+.section-list {
+    font-size: 30px;
+}
+
+.list-item {
+    font-size: 18px;
+}
+
+.list-ite {
+    padding: 8px;
+}
+
+a i {
+    /* color: gray; */
+    /* color:white; */
+}
+
+a i:nth-child(1) {
+    color: white;
+}
+
+a i:hover {
+    color: white;
+}

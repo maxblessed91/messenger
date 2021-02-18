@@ -1,0 +1,37 @@
+.messenger-screen {
+    /* margin: 50px; */
+    font-size: 30px;
+    /* max-height: auto; */
+    min-height: 100%;
+    /* max-width: 600px; */
+
+}
+
+.message-list {
+    background-color: #dae8f3;
+    min-height: 100%;
+}
+
+.header {
+    /* background-color: #fff; */
+    margin: 10px 10px 10px 20px;
+}
+
+.questions-messenger {
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(105, 104, 104);
+}
+
+.all-questions {
+    display: grid;
+    grid-template-columns: 92px 0.5fr;
+    grid-template-rows: repeat(1, 30px);
+    font-size: 14px;
+    color: rgb(180, 180, 180);
+    font-weight: 700;
+}
+
+.srt-dwn {
+    color: rgb(180, 180, 180);
+}

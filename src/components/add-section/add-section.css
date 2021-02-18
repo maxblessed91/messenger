@@ -1,0 +1,21 @@
+button {
+    margin-left: 66px;
+    /* padding-bottom: 40px; */
+    border-radius: 30px;
+    /* border: #518794; */
+    /* background-color: #5f7980; */
+    cursor: pointer;
+    font-size: 15px;
+    height: 24px;
+    width: 24px;
+    opacity: 0.5;
+}
+
+
+.section-list {
+    padding-left: 1px;
+}
+
+.mes-array {
+  padding-left: 1px;
+}

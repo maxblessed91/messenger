@@ -1,0 +1,210 @@
+/* Убираем внутренние отступы */
+ul[className],
+ol[className] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[className],
+ol[className],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[className],
+ol[className] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([className]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.nav-menu {
+    margin-left: 0;
+    max-width: 400px;
+    min-height: 100vh;
+    /* margin: 50px; */
+    color: black;
+    font-size: 30px;
+    background-color: #05222a;
+    background-size: 100vh;
+    max-width: 275px;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 0.8fr 2fr 2fr;
+  grid-template-rows: repeat(1, 70px);
+  padding-top: 15px;
+}
+
+.profile-img {
+  padding-left: 10px;
+  height: 35px;
+  width: auto;
+  border-radius: 5px;
+  margin-top: 3px;
+}
+
+.info {
+  margin-left: 8px;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+}
+
+.status {
+    font-size: 12.5px;
+    color: #728d94;
+    opacity: 0.5;
+    font-weight: bold;
+}
+
+.messages {
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.history {
+    font-size: 13px;
+    color: #728d94;
+    opacity: 0.5;
+}
+
+button {
+    margin-left: 66px;
+    border-radius: 30px;
+    border: #518794;
+    background-color: #5f7980;
+    cursor: pointer;
+    font-size: 15px;
+    height: 24px;
+    width: 24px;
+    opacity: 0.5;
+}
+
+i {
+    color: #05222a;
+}
+
+.section-list {
+    padding-left: 1px;
+}
+
+.mes-array {
+  padding-left: 1px;
+}
+
+li {
+    list-style-type: none;
+    color: #fff;
+    font-size: 14px;
+    padding: 3px;
+    font-weight: bold;
+}
+
+li i {
+    /* padding-right: 8px; */
+    color: #728d94;
+    font-size: 10px;
+}
+
+li i:nth-child(2) {
+    /* padding-right: 8px; */
+    color: white;
+    font-size: 10px;
+}
+
+li i:hover {
+    /* padding-right: 8px; */
+    color: white;
+    font-size: 10px;
+}
+
+/* a {
+    color: rgb(180, 178, 178);
+    padding: 1px 10px;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: #117fa4;
+    padding: 5px 1px;
+    border-radius: 3px;
+} */
+
+.list-ite {
+  /* color: rgb(180, 178, 178);
+   */
+  padding: 1px 10px;
+}
+
+li.list-ite:nth-child(2) {
+  text-decoration: none;
+  /* color: #fff; */
+  background-color: #117fa4;
+  width: 250px;
+  height: 45px;
+  /* padding: 10px 20px; */
+  border-radius: 3px;
+}
+
+li.list-ite:nth-child(2):hover {
+  color: #fff;
+}
+
+.field {
+  padding-left: 10px;
+
+}
+
+.section-list {
+  margin-top: 10px;
+}
