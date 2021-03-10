@@ -2,4 +2,5 @@
     display: grid;
     grid-template-columns: 275px 1fr;
     grid-template-rows: repeat(1, 100px);
+    font-family: Arial, Helvetica, sans-serif;
 }

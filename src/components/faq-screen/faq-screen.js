@@ -4,19 +4,12 @@ import NavMenu from '../nav-menu';
 import AddMessageForm from '../add-message-form';
 
 
-
-// import './my-questions-screen.css';
-
 export default class FAQScreen extends Component {
-    // const messagesData = [
-    //     {label: 'Hello, what is the delivery time?'},
-    //     {label: 'Hi, do you have this item in stock?'}
-    // ];
 
     initialId = 1;
 
     state = {
-        messagesData: [
+        messagesData4: [
             this.createMessage("If you have questions, add a new message in a form below")
         ]
     };
@@ -31,46 +24,40 @@ export default class FAQScreen extends Component {
     addItem = (text) => {
         const newItem = this.createMessage(text);
 
-        this.setState(( { messagesData } ) => {
+        this.setState(( { messagesData4 } ) => {
             const newArr = [
-                ...messagesData,
+                ...messagesData4,
                 newItem
             ];
 
             return {
-                messagesData: newArr
+                messagesData4: newArr
             };
         });
 
     };
 
     UNSAFE_componentWillMount() {
-        localStorage.getItem('messagesData') && this.setState({
-            messagesData: JSON.parse(localStorage.getItem('messagesData')),
+        localStorage.getItem('messagesData4') && this.setState({
+            messagesData4: JSON.parse(localStorage.getItem('messagesData4')),
         })
     }
 
     UNSAFE_componentWillUpdate(nextProps, nextState) {
-        localStorage.setItem('messagesData', JSON.stringify(nextState.messagesData));
+        localStorage.setItem('messagesData4', JSON.stringify(nextState.messagesData4));
     }
-    
+
     render() {
 
-    const { messagesData } = this.state;
-
-    return (
-        <div className='messenger'>
-            <NavMenu />
-            <div>
-                <MessengerScreen messages={messagesData} />
-                <AddMessageForm onItemAdded={this.addItem}/>
+        const { messagesData4 } = this.state;
+        return (
+            <div className='messenger'>
+                <NavMenu />
+                <div>
+                    <MessengerScreen messages={messagesData4} />
+                    <AddMessageForm onItemAdded={this.addItem}/>
+                </div>
             </div>
-
-        </div>
-        // <div>
-        //     Hello, world!
-        // </div>
-    );
-};
+        );
+    };
 }
-// export default App;

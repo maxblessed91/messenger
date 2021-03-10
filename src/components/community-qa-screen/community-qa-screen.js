@@ -4,19 +4,12 @@ import NavMenu from '../nav-menu';
 import AddMessageForm from '../add-message-form';
 
 
-
-// import './my-questions-screen.css';
-
 export default class CommunityQA extends Component {
-    // const messagesData = [
-    //     {label: 'Hello, what is the delivery time?'},
-    //     {label: 'Hi, do you have this item in stock?'}
-    // ];
 
     initialId = 3718;
 
     state = {
-        messagesData: [
+        messagesData3: [
             this.createMessage("My delivery hasn't arrived, what can I do?"),
             this.createMessage("Hello, what is the delivery time?"),
             this.createMessage("Hi, do you have this item in stock?"),
@@ -34,46 +27,41 @@ export default class CommunityQA extends Component {
     addItem = (text) => {
         const newItem = this.createMessage(text);
 
-        this.setState(( { messagesData } ) => {
+        this.setState(( { messagesData3 } ) => {
             const newArr = [
-                ...messagesData,
+                ...messagesData3,
                 newItem
             ];
 
             return {
-                messagesData: newArr
+                messagesData3: newArr
             };
         });
 
     };
 
     UNSAFE_componentWillMount() {
-        localStorage.getItem('messagesData') && this.setState({
-            messagesData: JSON.parse(localStorage.getItem('messagesData')),
+        localStorage.getItem('messagesData3') && this.setState({
+            messagesData3: JSON.parse(localStorage.getItem('messagesData3')),
         })
     }
 
     UNSAFE_componentWillUpdate(nextProps, nextState) {
-        localStorage.setItem('messagesData', JSON.stringify(nextState.messagesData));
+        localStorage.setItem('messagesData3', JSON.stringify(nextState.messagesData3));
     }
 
     render() {
 
-    const { messagesData } = this.state;
+        const { messagesData3 } = this.state;
+        return (
+            <div className='messenger'>
+                <NavMenu />
+                <div>
+                    <MessengerScreen messages={messagesData3} />
+                    <AddMessageForm onItemAdded={this.addItem}/>
+                </div>
 
-    return (
-        <div className='messenger'>
-            <NavMenu />
-            <div>
-                <MessengerScreen messages={messagesData} />
-                <AddMessageForm onItemAdded={this.addItem}/>
             </div>
-
-        </div>
-        // <div>
-        //     Hello, world!
-        // </div>
-    );
-};
+        );
+    };
 }
-// export default App;

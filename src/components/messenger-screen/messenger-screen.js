@@ -10,8 +10,9 @@ const MessengerScreen = ({ messages }) => {
                 <MessagesList {...item} />
             </li>
         );
-        });
-        return (
+    });
+
+    return (
             <div className='messenger-screen'>
                 <div className='header'>
                     <div className='questions-messenger'>
@@ -27,7 +28,7 @@ const MessengerScreen = ({ messages }) => {
                     </ul>
                 </div>
             </div>
-        );
+    );
 };
 
 export default MessengerScreen;

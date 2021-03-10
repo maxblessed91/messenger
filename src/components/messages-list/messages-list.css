@@ -1,21 +1,10 @@
-.m-list {
-    /* margin: 10px 10px 10px 10px; */
-    /* background-color: #fff; */
-    /* padding-bottom: 25px; */
-}
-
 .messages-list-id {
-    /* min-height: 50px; */
     color: rgb(105, 104, 104);
-    /* background-color: #fff; */
 }
 
 
 .messages-list-label {
-    /* min-height: 50px; */
     color: rgb(105, 104, 104);
-    /* background-color: #fff; */
-    /* margin-left: 10px; */
 }
 
 .grid-container {
@@ -55,7 +44,6 @@
 }
 
 .sender {
-    /* margin-right: 20px; */
     color: rgb(190, 189, 189);
 }
 

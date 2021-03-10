@@ -4,19 +4,14 @@ import NavMenu from '../nav-menu';
 import AddMessageForm from '../add-message-form';
 
 
-
 import './app.css';
 
 export default class App extends Component {
-    // const messagesData = [
-    //     {label: 'Hello, what is the delivery time?'},
-    //     {label: 'Hi, do you have this item in stock?'}
-    // ];
 
     initialId = 2718;
 
     state = {
-        messagesData: [
+        messagesData2: [
             this.createMessage("Hello, what is the delivery time?"),
             this.createMessage("Hi, do you have this item in stock?"),
             this.createMessage("Does this come in the colour blue?"),
@@ -34,42 +29,41 @@ export default class App extends Component {
     addItem = (text) => {
         const newItem = this.createMessage(text);
 
-        this.setState(( { messagesData } ) => {
+        this.setState(( { messagesData2 } ) => {
             const newArr = [
-                ...messagesData,
+                ...messagesData2,
                 newItem
             ];
 
             return {
-                messagesData: newArr
+                messagesData2: newArr
             };
         });
 
     };
 
     UNSAFE_componentWillMount() {
-        localStorage.getItem('messagesData') && this.setState({
-            messagesData: JSON.parse(localStorage.getItem('messagesData')),
+        localStorage.getItem('messagesData2') && this.setState({
+            messagesData2: JSON.parse(localStorage.getItem('messagesData2')),
         })
     }
 
     UNSAFE_componentWillUpdate(nextProps, nextState) {
-        localStorage.setItem('messagesData', JSON.stringify(nextState.messagesData));
+        localStorage.setItem('messagesData2', JSON.stringify(nextState.messagesData2));
         }
 
-render() {
 
-    const { messagesData } = this.state;
+    render() {
 
-    return (
-        <div className='messenger'>
-            <NavMenu />
-            <div>
-                <MessengerScreen messages={messagesData} />
-                <AddMessageForm onItemAdded={this.addItem}/>
+        const { messagesData2 } = this.state;
+        return (
+            <div className='messenger'>
+                <NavMenu />
+                <div>
+                    <MessengerScreen messages={messagesData2} />
+                    <AddMessageForm onItemAdded={this.addItem}/>
+                </div>
             </div>
-
-        </div>
-    );
-};
+        );
+    };
 }

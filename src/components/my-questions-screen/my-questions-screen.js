@@ -12,7 +12,7 @@ export default class MyQuestionsScreen extends Component {
     notificationsID = 85;
 
     state = {
-        messagesData: [
+        messagesData1: [
             this.createMessage("Does this come in the colour blue?"),
             this.createMessage("My delivery hasn't arrived, what can I do?"),
             this.createMessage("Hello, what is the delivery time?"),
@@ -30,41 +30,40 @@ export default class MyQuestionsScreen extends Component {
     addItem = (text) => {
         const newItem = this.createMessage(text);
 
-        this.setState(( { messagesData } ) => {
+        this.setState(( { messagesData1 } ) => {
             const newArr = [
-                ...messagesData,
+                ...messagesData1,
                 newItem
             ];
 
             return {
-                messagesData: newArr
+                messagesData1: newArr
             };
         });
 
     };
 
     UNSAFE_componentWillMount() {
-        localStorage.getItem('messagesData') && this.setState({
-            messagesData: JSON.parse(localStorage.getItem('messagesData')),
+        localStorage.getItem('messagesData1') && this.setState({
+            messagesData1: JSON.parse(localStorage.getItem('messagesData1')),
         })
     }
 
     UNSAFE_componentWillUpdate(nextProps, nextState) {
-        localStorage.setItem('messagesData', JSON.stringify(nextState.messagesData));
+        localStorage.setItem('messagesData1', JSON.stringify(nextState.messagesData1));
     }
 
-render() {
-    const { messagesData } = this.state;
+    render() {
+        const { messagesData1 } = this.state;
 
-    return (
-        <div className='messenger'>
-            <NavMenu />
-            <div>
-                <MessengerScreen messages={messagesData} />
-                <AddMessageForm onItemAdded={this.addItem}/>
+        return (
+            <div className='messenger'>
+                <NavMenu />
+                <div>
+                    <MessengerScreen messages={messagesData1} />
+                    <AddMessageForm onItemAdded={this.addItem}/>
+                </div>
             </div>
-
-        </div>
-    );
-};
+        );
+    };
 }

@@ -15,7 +15,6 @@ const MessagesList = ({ label, id }) => {
             </div>
         </div>
     )
-    }
-
+}
 
 export default MessagesList;

@@ -9,7 +9,7 @@ const SectionsList = ({ label, id }) => {
             <span> ({ id })</span>
         </div>
     )
-    }
+}
 
 
 export default SectionsList;
